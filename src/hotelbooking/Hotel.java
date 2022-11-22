@@ -26,7 +26,7 @@ public class Hotel{
         this.hotelName=hotelName;
         this.address=address;
         this.hotelApprovalStatus=HotelApprovalStatus.ON_PROCESS;
-        this.hotelType=HotelType.COLLECTIONZ;
+        this.hotelType=HotelType.PREMIUM;
     }
 
     private void updateRoomBookedStatus(int roomID,Date checkInDate,Date checkOutDate,boolean book){
@@ -153,13 +153,13 @@ public class Hotel{
 
         int amenityPercent=(int)getTotalAmenityPercent();
         if(amenityPercent>=90){
-            this.hotelType=HotelType.TOWNHOUSE;
+            this.hotelType=HotelType.ELITE;
         }
         else if (amenityPercent>=50){
-            this.hotelType=HotelType.COLLECTIONZ;
+            this.hotelType=HotelType.PREMIUM;
         }
         else{
-            this.hotelType=HotelType.SPOTZ;
+            this.hotelType=HotelType.STANDARD;
         }
 
     }

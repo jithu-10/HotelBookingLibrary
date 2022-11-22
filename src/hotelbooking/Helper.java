@@ -7,7 +7,7 @@ import java.util.GregorianCalendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Helper {
+class Helper {
 
 
     static ArrayList<Date> getDatesBetweenTwoDates(Date startDate,Date endDate){

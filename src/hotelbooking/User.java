@@ -1,8 +1,5 @@
 package hotelbooking;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class User {
     private final String userName;
     private final long phoneNumber;
@@ -32,7 +29,6 @@ public class User {
     public String getMailID(){
         return  mailID;
     }
-
 
 
 

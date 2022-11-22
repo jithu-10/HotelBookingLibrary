@@ -2,7 +2,7 @@ package hotelbooking;
 
 import java.util.HashMap;
 
-public class UserAuthenticationDB {
+class UserAuthenticationDB {
 
     private final HashMap<String,String> adminAuthentication=new HashMap<>();
     private final HashMap<Long,String> hotelAdminAuthentication =new HashMap<>();
