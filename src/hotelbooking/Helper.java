@@ -104,5 +104,13 @@ public class Helper {
         }
     }
 
+    static void validateMailID(String mailID){
+        Pattern pattern=Pattern.compile("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+        Matcher matcher=pattern.matcher(mailID);
+        if(!matcher.matches()){
+            throw  new RuntimeException("E-Mail is Not Valid");
+        }
+    }
+
 
 }

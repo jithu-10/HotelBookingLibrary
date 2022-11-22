@@ -91,7 +91,7 @@ public class UserDB  {
 
 
     public boolean isHotelEmailExist(String email){
-        Helper.validateString(email,"E-Mail can't be null or empty");
+        Helper.validateMailID(email);
         return UserAuthenticationDB.getInstance().isHotelEmailExist(email);
     }
 
@@ -101,7 +101,7 @@ public class UserDB  {
     }
 
     public boolean isCustomerEmailExist(String email){
-        Helper.validateString(email,"E-Mail can't be null or empty");
+        Helper.validateMailID(email);
         return UserAuthenticationDB.getInstance().isCustomerEmailExist(email);
     }
 

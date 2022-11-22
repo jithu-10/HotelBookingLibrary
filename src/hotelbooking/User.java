@@ -13,7 +13,7 @@ public class User {
     public User(String userName,long phoneNumber,String mailID){
         Helper.validateString(userName,"User name can't be null or empty");
         Helper.validatePhoneNumber(phoneNumber);
-        validateMailID(mailID);
+        Helper.validateMailID(mailID);
         this.userID=UserDB.getInstance().generateId();
         this.userName=userName;
         this.phoneNumber=phoneNumber;
@@ -35,13 +35,7 @@ public class User {
 
 
 
-    private static void validateMailID(String mailID){
-        Pattern pattern=Pattern.compile("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
-        Matcher matcher=pattern.matcher(mailID);
-        if(!matcher.matches()){
-            throw  new RuntimeException("E-Mail is Not Valid");
-        }
-    }
+
 
 
 }
